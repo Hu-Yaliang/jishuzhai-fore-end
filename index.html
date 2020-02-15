@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <title>`技术宅后花园`</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      window.onblur = function() {
+        document.title = "藏起来了d(`x_x)b!";
+      };
+      window.onfocus = function() {
+        document.title = "欢迎回来！d(`^_^)b!";
+        setTimeout(() => {
+          document.title = "`技术宅后花园`"
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
