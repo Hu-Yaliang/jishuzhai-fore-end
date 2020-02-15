@@ -1,6 +1,6 @@
-# blog
+# jishuzhai-fore-end
 
-> A Vue.js project
+> A blog platform named jishuzhai
 
 ## Build Setup
 
