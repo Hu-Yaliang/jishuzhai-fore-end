@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import axios from 'axios'
 import HomePart from '@/components/HomePart'
 import AboutMe from '@/components/AboutMe'
 import ReadBlog from '@/components/ReadBlog'
 import ArticlePart from '@/components/ArticlePart'
 import BlogPart from '@/components/BlogPart'
 import SortPart from '@/components/SortPart'
+import LoginForm from '@/components/LoginForm'
+import UserCenter from '@/components/UserCenter'
 
 Vue.use(Router)
+Vue.use(axios)
 
 export default new Router({
   routes: [
@@ -35,6 +39,14 @@ export default new Router({
       path: '/sort-part',
       name: 'SortPart',
       component: SortPart
+    },{
+      path: '/login-form',
+      name: 'LoginForm',
+      component: LoginForm
+    },{
+      path: '/user-center',
+      name: 'UserCenter',
+      component: UserCenter
     }
   ]
 })

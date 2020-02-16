@@ -19,11 +19,19 @@
         <div class="router-line"></div>
       </div>
       <div class="router-list">
+        <router-link to="/user-center">个人</router-link>
+        <div class="router-line"></div>
+      </div>
+      <div class="router-list">
         <router-link to="/about-me">关于</router-link>
         <div class="router-line"></div>
       </div>
+      <div class="blank"></div>
+      <div class="router-list">
+        <router-link to="/login-form">登录</router-link>
+        <div class="router-line"></div>
+      </div>
     </nav>
-    <div class="blank"></div>
   </div>
 </template>
 
@@ -53,6 +61,7 @@ export default {
 }
 
 nav {
+  flex: 1;
   display: flex;
   align-items: center;
 }
@@ -94,5 +103,21 @@ nav {
 
 .blank {
   flex: 1;
+}
+
+.login-register {
+  color: aliceblue;
+  margin-right: 40px;
+}
+
+.login-register a {
+  text-decoration: none;
+  display: inline-block;
+  color: aliceblue;
+  font-size: 16px;
+}
+
+.login-register a:hover {
+  color: #ff6700;
 }
 </style>

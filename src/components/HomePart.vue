@@ -10,26 +10,31 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HomePart',
   data() {
     return {
-      articles: [{
-        id: 1,
-        title: '写博客的重要性'
-      },{
-        id: 2,
-        title: '如何写博客'
-      },{
-        id: 3,
-        title: '如何写博客2'
-      }]
+      articles: []
     }
   },
   methods: {
     showDetail(id) {
       console.log(id);
+    },
+    getBlog() {
+      axios.get('/api/blog/list').then(function(res) {
+        if (res.data.isSuccess) {
+          this.articles = res.data.data;
+        }
+      }.bind(this)).catch(err => {
+        console.log(err);
+        return;
+      })
     }
+  },
+  mounted() {
+    this.getBlog();
   }
 }
 </script>
