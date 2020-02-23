@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <title>`技术宅后花园`</title>
     <style>
       * {
@@ -12,21 +13,41 @@
         padding: 0;
         box-sizing: border-box;
       }
+      .note-editor {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+      }
+      .mobile-end {
+        display: none;
+      }
+      .footer-records {
+        width: 100vw;
+        height: 30px;
+        color: aliceblue;
+        background-color: #2c3e50;
+        font-size: 12px;
+        line-height: 30px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <!-- <div class="mobile-end">
+      <div class="remind-message">请使用 PC 进行访问</div>
+    </div> -->
+    <div class="footer-records">苏 ICP 备 20007239 号 Copyright&copy; 2020-2020 技术宅后花园</div> 
     <script>
-      window.onblur = function() {
+      window.onblur = () => {
         document.title = "藏起来了d(`x_x)b!";
       };
-      window.onfocus = function() {
+      window.onfocus = () => {
         document.title = "欢迎回来！d(`^_^)b!";
         setTimeout(() => {
-          document.title = "`技术宅后花园`"
+          document.title = "`技术宅后花园`";
         }, 1000);
-      }
+      }; 
     </script>
   </body>
 </html>

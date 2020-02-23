@@ -1,31 +1,25 @@
 <template>
   <div id="app">
-    <page-header></page-header>
-    <main>
-      <div class="content">
-        <div class="left-content">
-          <personal-card></personal-card>
-          <user-info></user-info>
-        </div>
-        <router-view/>
-        <bulletin-board></bulletin-board> 
-      </div>
-    </main>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import PageHeader from './components/PageHeader'
-import PersonalCard from './components/PersonalCard'
-import UserInfo from './components/UserInfo'
-import BulletinBoard from './components/BulletinBoard'
 export default {
   name: 'App',
-  components: {
-    PageHeader,
-    PersonalCard,
-    UserInfo,
-    BulletinBoard
+  created () {
+    //在页面加载时读取sessionStorage里的状态信息
+    if (sessionStorage.getItem("storedata") ) {
+      this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(sessionStorage.getItem("storedata"))))
+    }
+    //在页面刷新时将vuex里的信息保存到sessionStorage里
+    window.addEventListener("beforeunload",() => {
+      sessionStorage.setItem("storedata",JSON.stringify(this.$store.state))
+    });
+    // 兼容iphone手机
+    window.addEventListener("pagehide",() => {
+      sessionStorage.setItem("storedata",JSON.stringify(this.$store.state))
+    });
   }
 }
 </script>
@@ -36,26 +30,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-}
-main {
-  width: 100%;
-  background-image: url(./assets/images/bizhi.png);
-  background-position-y: 10%;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: calc(100vh - 60px);
-  height: auto;
-}
-
-main .content {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-content {
-  margin-right: 10px;
 }
 </style>

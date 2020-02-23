@@ -1,52 +1,83 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import axios from 'axios'
-import HomePart from '@/components/HomePart'
-import AboutMe from '@/components/AboutMe'
-import ReadBlog from '@/components/ReadBlog'
-import ArticlePart from '@/components/ArticlePart'
-import BlogPart from '@/components/BlogPart'
-import SortPart from '@/components/SortPart'
-import LoginForm from '@/components/LoginForm'
-import UserCenter from '@/components/UserCenter'
+// 登录注册路由
+import LoginRegister from '@/components/LoginRegister'
+import Login from '@/components/sub-components/Login'
+import Register from '@/components/sub-components/Register'
+// 主页路由
+import HomePage from '@/components/HomePage'
+import HomePart from '@/components/sub-components/HomePart'
+import SortPart from '@/components/sub-components/SortPart'
+import AboutMe from '@/components/sub-components/AboutMe'
+import UserArticle from '@/components/sub-components/UserArticle'
+import UserCenter from '@/components/sub-components/UserCenter'
+import NewBlog from '@/components/sub-components/NewBlog'
+// 后台路由
+import BlogBack from '@/components/BlogBack'
+import BlogControl from '@/components/sub-components/BlogControl'
+import BlogData from '@/components/sub-components/BlogData'
+import UserControl from '@/components/sub-components/UserControl'
+import UserData from '@/components/sub-components/UserData'
+import ReadBlog from '@/components/sub-components/ReadBlog'
 
 Vue.use(Router)
-Vue.use(axios)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
+      path: '/user',
+      name: 'LoginRegister',
+      component: LoginRegister,
+      children: [{
+        path: 'login',
+        component: Login
+      },{
+        path: 'register',
+        component: Register
+      }]
+    },{
       path: '/',
-      name: 'HomePart',
-      component: HomePart
+      name: 'HomePage',
+      component: HomePage,
+      redirect: '/home-part',
+      children: [{
+        path: 'home-part',
+        component: HomePart
+      },{
+        path: '/sort-part',
+        component: SortPart
+      },{
+        path: '/user-article',
+        component: UserArticle
+      },{
+        path: '/about-me',
+        component: AboutMe
+      },{
+        path: '/user-center',
+        component: UserCenter
+      },{
+        path: '/new-blog',
+        component: NewBlog
+      },{
+        path: '/read-blog',
+        component: ReadBlog
+      }]
     },{
-      path: '/about-me',
-      name: 'AboutMe',
-      component: AboutMe
-    },{
-      path: '/read-blog',
-      name: 'ReadBlog',
-      component: ReadBlog
-    },{
-      path: '/article-part',
-      name: 'ArticlePart',
-      component: ArticlePart
-    },{
-      path: '/blog-part',
-      name: 'BlogPart',
-      component: BlogPart
-    },{
-      path: '/sort-part',
-      name: 'SortPart',
-      component: SortPart
-    },{
-      path: '/login-form',
-      name: 'LoginForm',
-      component: LoginForm
-    },{
-      path: '/user-center',
-      name: 'UserCenter',
-      component: UserCenter
+      path: '/blog-back',
+      component: BlogBack,
+      redirect: '/user-control',
+      children: [{
+        path: '/user-control',
+        component: UserControl
+      },{
+        path: '/user-data',
+        component: UserData
+      },{
+        path: '/blog-control',
+        component: BlogControl
+      },{
+        path: '/blog-data',
+        component: BlogData
+      }]
     }
   ]
 })
