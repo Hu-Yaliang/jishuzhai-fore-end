@@ -74,7 +74,7 @@ export default {
 .card-bg {
   width: 100%;
   height: 110px;
-  background-image: url(../../assets/images/card-bg.jpg);
+  background-image: url(~@/assets/images/card-bg.jpg);
   background-size: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -149,7 +149,7 @@ export default {
   position: absolute;
   top: 75px;
   left: 95px;
-  background-image: url(../../assets/images/avatar.jpg);
+  background-image: url(~@/assets/images/avatar.jpg);
   background-size: cover;
 }
 

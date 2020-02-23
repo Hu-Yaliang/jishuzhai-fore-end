@@ -68,7 +68,7 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-image: url(../../assets/images/avatar.jpg);
+  background-image: url(~@/assets/images/avatar.jpg);
   background-size: cover;
   margin-left: 20px;
 }
@@ -143,7 +143,7 @@ export default {
   width: 12px;
   height: 12px;
   margin: 0px 5px 0px 20px;
-  background-image: url(../../assets/images/icon.png);
+  background-image: url(~@/assets/images/icon.png);
   background-size: cover;
 }
 

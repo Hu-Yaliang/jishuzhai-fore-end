@@ -85,7 +85,7 @@ export default {
   height: 28vw;
   border-radius: 5px;
   color: white;
-  background-image: url(../../assets/images/blog-bg.jpg);
+  background-image: url(~@/assets/images/blog-bg.jpg);
   background-size: cover;
   margin-bottom: 10px;
 }
@@ -108,7 +108,7 @@ header .avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-image: url(../../assets/images/avatar.jpg);
+  background-image: url(~@/assets/images/avatar.jpg);
   background-size: cover;
 }
 

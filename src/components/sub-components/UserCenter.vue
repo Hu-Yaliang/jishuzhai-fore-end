@@ -329,7 +329,7 @@ export default {
   flex: 1;
   margin: 0px 10px 10px 10px;
   border-radius: 5px;
-  background-image: url(../../assets/images/data-bg.jpg);
+  background-image: url(~@/assets/images/data-bg.jpg);
   background-size: cover;
   background-position-y: 24%;
 }

@@ -124,7 +124,7 @@ export default {
   flex: 1;
   margin: 0px 10px;
   border-radius: 5px;
-  background-image: url(../../assets/images/user-center-bg.jpg);
+  background-image: url(~@/assets/images/user-center-bg.jpg);
   background-size: cover;
   height: calc(100vh - 170px);
 }

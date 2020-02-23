@@ -93,7 +93,7 @@ export default {
   width: 100vw;
   min-width: 1180px;
   height: 150px;
-  background-image: url(../../assets/images/home-header-bg.jpg);
+  background-image: url(~@/assets/images/home-header-bg.jpg);
   background-size: cover;
   background-position-y: 62%;
 }
@@ -173,7 +173,7 @@ nav {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-image: url(../../assets/images/avatar.jpg);
+  background-image: url(~@/assets/images/avatar.jpg);
   background-size: cover;
   cursor: pointer;
 }

@@ -116,7 +116,7 @@ export default {
 .about-bg {
   width: 100%;
   height: 20vw;
-  background-image: url(../../assets/images/img8.jpg);
+  background-image: url(~@/assets/images/img8.jpg);
   background-size: cover;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -137,7 +137,7 @@ export default {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-image: url(../../assets/images/personal-avatar.jpg);
+  background-image: url(~@/assets/images/personal-avatar.jpg);
   background-size: cover;
 }
 

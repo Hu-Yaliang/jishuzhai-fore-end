@@ -159,7 +159,7 @@ export default {
   height: calc(100vh - 150px);
   width: calc(100vw - 200px);
   margin-left: 200px;
-  background-image: url(../../assets/images/back-bg.jpg);
+  background-image: url(~@/assets/images/back-bg.jpg);
   background-size: cover;
 }
 
