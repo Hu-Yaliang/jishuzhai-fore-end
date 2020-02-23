@@ -119,9 +119,7 @@ header .avatar {
 
 .content {
   margin-top: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 5px;
 }
