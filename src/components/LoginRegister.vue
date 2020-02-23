@@ -75,7 +75,7 @@ export default {
 .login-register {
   width: 100vw;
   height: 100vh;
-  background-image: url(../assets/images/login-bg.png);
+  background-image: url(../assets/images/login-bg.jpg);
   background-size: cover;
   position: relative;
   min-width: 340px;

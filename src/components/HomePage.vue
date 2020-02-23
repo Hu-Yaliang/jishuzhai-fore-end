@@ -33,7 +33,7 @@ export default {
 .home-page {
   min-height: 100vh;
   min-width: 1180px;
-  background-image: url(../assets/images/home-page-bg.png);
+  background-image: url(../assets/images/home-page-bg.jpg);
   background-position-y: -30%;
   background-size: cover;
   background-attachment: fixed;

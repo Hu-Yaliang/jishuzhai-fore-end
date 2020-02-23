@@ -134,7 +134,7 @@ header .overlay {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-image: url(../assets/images/avatar.png);
+  background-image: url(../assets/images/avatar.jpg);
   background-size: cover;
 }
 
